@@ -40,7 +40,7 @@ const [anakin, luke] = await db.set('character', [
   { name: 'Luke', age: 19, dark: true },
 ])
 
-// create a relation 
+// create a relation
 await db.link(anakin, 'fatherOf', luke)
 
 // get by relation
@@ -52,6 +52,7 @@ const old = await db.find('character', 'age>40') // [{ name: 'Anakin', ...}]
 ```
 
 #### Seed the database
+
 Just do some `db.set()`
 
 ### Todo
@@ -61,3 +62,8 @@ Just do some `db.set()`
 - Externalize method
 - Think about bidirectional
 - CheckPropTypes throw
+
+### For serious people
+
+This repository is just the result of having some fun with redis basics, if you're looking for straghtforward redis modules  
+👉 https://redis.io/modules
